@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="sdcApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+  <script src=script.js></script>
+</head>
+
+<body>
+
+	<h1>ng-repeat</h1>
+	<div ng-controller="ctrlRepeat">
+		<div class="" ng-repeat="futbolista in futbolistas">
+			<p>{{$index + 1}} {{futbolista.nombre}}</p>
+			<small>{{futbolista.apellido}}</small>
+			<small>{{futbolista.edad}} a;os</small>
+	</div>
+
+	<h1>Controladores</h1>
+	<div ng-controller="controlador1">
+		<h3>Promocion</h3>
+		<h2>$2.50 cada uno</h2>
+		<label for="">Cant de juegos:</label>
+		<input typer="text" ng-model="cantidad"><br>
+		<p>Precio Total </p>
+		<h2>{{cantidad*precio | currency}}</h2>
+	</div>
+
+	
+
+
+	<h1>Data binding</h1>
+	<label for="">Nombre:</label>
+	<input typer="text" ng-model="nombre">
+
+	<h3>My name is </h3>
+	<h2>{{nombre}}</h2>
+
+	<h1>Filtros</h1>
+	<li>Precio 1: {{ 50 | currency}} </li>
+	<li>Precio 1: {{ 30 | currency:"E"}} </li>
+
+	<h1>Expresiones</h1>
+	<p> {{ 3*8 }} Horas </p>
+	<p> {{ 20*20-35 }} Dias </p>
+
+</body>
+
+</html>
